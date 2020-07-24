@@ -1,1 +1,6 @@
-<h1>TRACKS</h1>
+
+  {{#each data}}
+<h4>{{ name }}</h4>
+<audio src="/tracks/{{ preview_url }}">Listen</audio>
+ 
+ {{/each}}

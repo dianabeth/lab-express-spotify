@@ -55,7 +55,7 @@ app.get('/albums/:id', (request, response) => {
 app.get('/tracks/:id', (request, response) => {
   const id = request.params.id;
   spotifyApi
-    .getAlbumTracks(id, { limit: 5, offset: 1 })
+    .getAlbumTracks(id, { limit: 20, offset: 1 })
     .then(data => {
       console.log('The received data from the API: ', data.body.items);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
